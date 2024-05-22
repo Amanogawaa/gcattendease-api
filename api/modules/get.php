@@ -133,13 +133,13 @@ class Get extends GlobalMethods
 
     public function get_event_feedback($event_id)
     {
-        $condition = $event_id ? "event_Id=$event_id" : null;
-        return $this->get_records('EventFeedback', $condition);
+        $condition = $event_id ? "event_id = $event_id" : null;
+        return $this->get_records('eventfeedback', $condition);
     }
 
     public function get_all_event_feedback()
     {
-        return $this->get_records('EventFeedback');
+        return $this->get_records('eventfeedback');
     }
 
     public function get_student($user_id = null)
